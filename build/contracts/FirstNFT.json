@@ -26777,34 +26777,34 @@
     "absolutePath": "project:/contracts/FirstNFT.sol",
     "exportedSymbols": {
       "Address": [
-        3191
+        3201
       ],
       "Context": [
-        3213
+        3223
       ],
       "ERC1155": [
-        2716
+        2726
       ],
       "ERC165": [
-        3311
+        3321
       ],
       "FirstNFT": [
         98
       ],
       "IERC1155": [
-        2838
+        2848
       ],
       "IERC1155MetadataURI": [
-        2894
+        2904
       ],
       "IERC1155Receiver": [
-        2879
+        2889
       ],
       "IERC165": [
-        3323
+        3333
       ],
       "Ownable": [
-        1560
+        1570
       ]
     },
     "id": 99,
@@ -26829,7 +26829,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 99,
-        "sourceUnit": 2717,
+        "sourceUnit": 2727,
         "src": "60:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -26841,7 +26841,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 99,
-        "sourceUnit": 1561,
+        "sourceUnit": 1571,
         "src": "137:68:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -26854,7 +26854,7 @@
               "id": 4,
               "name": "ERC1155",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2716,
+              "referencedDeclaration": 2726,
               "src": "230:7:0"
             },
             "id": 5,
@@ -26866,7 +26866,7 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1560,
+              "referencedDeclaration": 1570,
               "src": "239:7:0"
             },
             "id": 7,
@@ -26881,13 +26881,13 @@
         "id": 98,
         "linearizedBaseContracts": [
           98,
-          1560,
-          2716,
-          2894,
-          2838,
-          3311,
-          3323,
-          3213
+          1570,
+          2726,
+          2904,
+          2848,
+          3321,
+          3333,
+          3223
         ],
         "name": "FirstNFT",
         "nameLocation": "218:8:0",
@@ -27198,7 +27198,7 @@
                             "name": "_mint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2199,
+                            "referencedDeclaration": 2209,
                             "src": "470:5:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -27402,7 +27402,7 @@
                   "id": 20,
                   "name": "ERC1155",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2716,
+                  "referencedDeclaration": 2726,
                   "src": "391:7:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -27559,7 +27559,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2199,
+                      "referencedDeclaration": 2209,
                       "src": "651:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -27599,7 +27599,7 @@
                   "id": 62,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1502,
+                  "referencedDeclaration": 1512,
                   "src": "630:9:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -27895,7 +27895,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2377,
+                      "referencedDeclaration": 2387,
                       "src": "844:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
@@ -28044,34 +28044,34 @@
     "absolutePath": "project:/contracts/FirstNFT.sol",
     "exportedSymbols": {
       "Address": [
-        3191
+        3201
       ],
       "Context": [
-        3213
+        3223
       ],
       "ERC1155": [
-        2716
+        2726
       ],
       "ERC165": [
-        3311
+        3321
       ],
       "FirstNFT": [
         98
       ],
       "IERC1155": [
-        2838
+        2848
       ],
       "IERC1155MetadataURI": [
-        2894
+        2904
       ],
       "IERC1155Receiver": [
-        2879
+        2889
       ],
       "IERC165": [
-        3323
+        3333
       ],
       "Ownable": [
-        1560
+        1570
       ]
     },
     "id": 99,
@@ -28096,7 +28096,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 99,
-        "sourceUnit": 2717,
+        "sourceUnit": 2727,
         "src": "60:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -28108,7 +28108,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 99,
-        "sourceUnit": 1561,
+        "sourceUnit": 1571,
         "src": "137:68:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -28121,7 +28121,7 @@
               "id": 4,
               "name": "ERC1155",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2716,
+              "referencedDeclaration": 2726,
               "src": "230:7:0"
             },
             "id": 5,
@@ -28133,7 +28133,7 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1560,
+              "referencedDeclaration": 1570,
               "src": "239:7:0"
             },
             "id": 7,
@@ -28148,13 +28148,13 @@
         "id": 98,
         "linearizedBaseContracts": [
           98,
-          1560,
-          2716,
-          2894,
-          2838,
-          3311,
-          3323,
-          3213
+          1570,
+          2726,
+          2904,
+          2848,
+          3321,
+          3333,
+          3223
         ],
         "name": "FirstNFT",
         "nameLocation": "218:8:0",
@@ -28465,7 +28465,7 @@
                             "name": "_mint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2199,
+                            "referencedDeclaration": 2209,
                             "src": "470:5:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -28669,7 +28669,7 @@
                   "id": 20,
                   "name": "ERC1155",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2716,
+                  "referencedDeclaration": 2726,
                   "src": "391:7:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -28826,7 +28826,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2199,
+                      "referencedDeclaration": 2209,
                       "src": "651:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -28866,7 +28866,7 @@
                   "id": 62,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1502,
+                  "referencedDeclaration": 1512,
                   "src": "630:9:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -29162,7 +29162,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2377,
+                      "referencedDeclaration": 2387,
                       "src": "844:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$returns$__$",
@@ -29458,7 +29458,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-01-18T19:59:38.789Z",
+  "updatedAt": "2022-01-18T20:03:17.143Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

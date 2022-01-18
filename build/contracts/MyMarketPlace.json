@@ -6360,37 +6360,37 @@
     "absolutePath": "project:/contracts/MyMarket.sol",
     "exportedSymbols": {
       "Address": [
-        3191
+        3201
       ],
       "Context": [
-        3213
+        3223
       ],
       "Counters": [
-        3287
+        3297
       ],
       "ERC1155": [
-        2716
+        2726
       ],
       "ERC165": [
-        3311
+        3321
       ],
       "IERC1155": [
-        2838
+        2848
       ],
       "IERC1155MetadataURI": [
-        2894
+        2904
       ],
       "IERC1155Receiver": [
-        2879
+        2889
       ],
       "IERC165": [
-        3323
+        3333
       ],
       "MyMarketPlace": [
         704
       ],
       "ReentrancyGuard": [
-        1600
+        1610
       ]
     },
     "id": 705,
@@ -6415,7 +6415,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 3288,
+        "sourceUnit": 3298,
         "src": "60:68:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6427,7 +6427,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 2717,
+        "sourceUnit": 2727,
         "src": "130:75:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6439,7 +6439,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 1601,
+        "sourceUnit": 1611,
         "src": "207:78:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6465,7 +6465,7 @@
               "id": 505,
               "name": "Counters",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3287,
+              "referencedDeclaration": 3297,
               "src": "327:8:3"
             },
             "nodeType": "UsingForDirective",
@@ -6477,13 +6477,13 @@
                 "id": 506,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "340:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "340:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -6500,7 +6500,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$3219_storage",
+              "typeIdentifier": "t_struct$_Counter_$3229_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -6510,13 +6510,13 @@
                 "id": 509,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "363:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "363:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -6534,7 +6534,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$3219_storage",
+              "typeIdentifier": "t_struct$_Counter_$3229_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -6544,13 +6544,13 @@
                 "id": 512,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "404:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "404:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -6808,7 +6808,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC1155_$2716",
+                        "typeIdentifier": "t_contract$_ERC1155_$2726",
                         "typeString": "contract ERC1155"
                       },
                       "typeName": {
@@ -6818,13 +6818,13 @@
                           "id": 543,
                           "name": "ERC1155",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 2716,
+                          "referencedDeclaration": 2726,
                           "src": "782:7:3"
                         },
-                        "referencedDeclaration": 2716,
+                        "referencedDeclaration": 2726,
                         "src": "782:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -6858,10 +6858,10 @@
                       "name": "ERC1155",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2716,
+                      "referencedDeclaration": 2726,
                       "src": "798:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2716_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2726_$",
                         "typeString": "type(contract ERC1155)"
                       }
                     },
@@ -6876,7 +6876,7 @@
                     "src": "798:24:3",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC1155_$2716",
+                      "typeIdentifier": "t_contract$_ERC1155_$2726",
                       "typeString": "contract ERC1155"
                     }
                   },
@@ -6956,7 +6956,7 @@
                               "referencedDeclaration": 545,
                               "src": "841:5:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC1155_$2716",
+                                "typeIdentifier": "t_contract$_ERC1155_$2726",
                                 "typeString": "contract ERC1155"
                               }
                             },
@@ -6967,7 +6967,7 @@
                             "lValueRequested": false,
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1716,
+                            "referencedDeclaration": 1726,
                             "src": "841:15:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$returns$_t_uint256_$",
@@ -7181,7 +7181,7 @@
                             "referencedDeclaration": 545,
                             "src": "932:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ERC1155_$2716",
+                              "typeIdentifier": "t_contract$_ERC1155_$2726",
                               "typeString": "contract ERC1155"
                             }
                           },
@@ -7192,7 +7192,7 @@
                           "lValueRequested": false,
                           "memberName": "isApprovedForAll",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1815,
+                          "referencedDeclaration": 1825,
                           "src": "932:22:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -7288,7 +7288,7 @@
                         "referencedDeclaration": 511,
                         "src": "1029:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -7299,10 +7299,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3245,
+                      "referencedDeclaration": 3255,
                       "src": "1029:19:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$3219_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$3229_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -7371,7 +7371,7 @@
                         "referencedDeclaration": 511,
                         "src": "1078:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -7382,10 +7382,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3231,
+                      "referencedDeclaration": 3241,
                       "src": "1078:17:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3219_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3229_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -7770,7 +7770,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC1155_$2716",
+                        "typeIdentifier": "t_contract$_ERC1155_$2726",
                         "typeString": "contract ERC1155"
                       },
                       "typeName": {
@@ -7780,13 +7780,13 @@
                           "id": 608,
                           "name": "ERC1155",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 2716,
+                          "referencedDeclaration": 2726,
                           "src": "1379:7:3"
                         },
-                        "referencedDeclaration": 2716,
+                        "referencedDeclaration": 2726,
                         "src": "1379:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -7860,10 +7860,10 @@
                       "name": "ERC1155",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2716,
+                      "referencedDeclaration": 2726,
                       "src": "1395:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2716_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2726_$",
                         "typeString": "type(contract ERC1155)"
                       }
                     },
@@ -7878,7 +7878,7 @@
                     "src": "1395:44:3",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC1155_$2716",
+                      "typeIdentifier": "t_contract$_ERC1155_$2726",
                       "typeString": "contract ERC1155"
                     }
                   },
@@ -8705,7 +8705,7 @@
                         "referencedDeclaration": 610,
                         "src": "1761:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -8716,7 +8716,7 @@
                       "lValueRequested": false,
                       "memberName": "safeTransferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1853,
+                      "referencedDeclaration": 1863,
                       "src": "1761:22:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -8984,7 +8984,7 @@
                         "referencedDeclaration": 511,
                         "src": "2093:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -8995,10 +8995,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3231,
+                      "referencedDeclaration": 3241,
                       "src": "2093:17:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3219_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3229_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -9090,37 +9090,37 @@
     "absolutePath": "project:/contracts/MyMarket.sol",
     "exportedSymbols": {
       "Address": [
-        3191
+        3201
       ],
       "Context": [
-        3213
+        3223
       ],
       "Counters": [
-        3287
+        3297
       ],
       "ERC1155": [
-        2716
+        2726
       ],
       "ERC165": [
-        3311
+        3321
       ],
       "IERC1155": [
-        2838
+        2848
       ],
       "IERC1155MetadataURI": [
-        2894
+        2904
       ],
       "IERC1155Receiver": [
-        2879
+        2889
       ],
       "IERC165": [
-        3323
+        3333
       ],
       "MyMarketPlace": [
         704
       ],
       "ReentrancyGuard": [
-        1600
+        1610
       ]
     },
     "id": 705,
@@ -9145,7 +9145,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 3288,
+        "sourceUnit": 3298,
         "src": "60:68:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9157,7 +9157,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 2717,
+        "sourceUnit": 2727,
         "src": "130:75:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9169,7 +9169,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 705,
-        "sourceUnit": 1601,
+        "sourceUnit": 1611,
         "src": "207:78:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9195,7 +9195,7 @@
               "id": 505,
               "name": "Counters",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3287,
+              "referencedDeclaration": 3297,
               "src": "327:8:3"
             },
             "nodeType": "UsingForDirective",
@@ -9207,13 +9207,13 @@
                 "id": 506,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "340:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "340:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -9230,7 +9230,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$3219_storage",
+              "typeIdentifier": "t_struct$_Counter_$3229_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -9240,13 +9240,13 @@
                 "id": 509,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "363:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "363:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -9264,7 +9264,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$3219_storage",
+              "typeIdentifier": "t_struct$_Counter_$3229_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -9274,13 +9274,13 @@
                 "id": 512,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3219,
+                "referencedDeclaration": 3229,
                 "src": "404:16:3"
               },
-              "referencedDeclaration": 3219,
+              "referencedDeclaration": 3229,
               "src": "404:16:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$3219_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$3229_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -9538,7 +9538,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC1155_$2716",
+                        "typeIdentifier": "t_contract$_ERC1155_$2726",
                         "typeString": "contract ERC1155"
                       },
                       "typeName": {
@@ -9548,13 +9548,13 @@
                           "id": 543,
                           "name": "ERC1155",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 2716,
+                          "referencedDeclaration": 2726,
                           "src": "782:7:3"
                         },
-                        "referencedDeclaration": 2716,
+                        "referencedDeclaration": 2726,
                         "src": "782:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -9588,10 +9588,10 @@
                       "name": "ERC1155",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2716,
+                      "referencedDeclaration": 2726,
                       "src": "798:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2716_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2726_$",
                         "typeString": "type(contract ERC1155)"
                       }
                     },
@@ -9606,7 +9606,7 @@
                     "src": "798:24:3",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC1155_$2716",
+                      "typeIdentifier": "t_contract$_ERC1155_$2726",
                       "typeString": "contract ERC1155"
                     }
                   },
@@ -9686,7 +9686,7 @@
                               "referencedDeclaration": 545,
                               "src": "841:5:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC1155_$2716",
+                                "typeIdentifier": "t_contract$_ERC1155_$2726",
                                 "typeString": "contract ERC1155"
                               }
                             },
@@ -9697,7 +9697,7 @@
                             "lValueRequested": false,
                             "memberName": "balanceOf",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1716,
+                            "referencedDeclaration": 1726,
                             "src": "841:15:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$returns$_t_uint256_$",
@@ -9911,7 +9911,7 @@
                             "referencedDeclaration": 545,
                             "src": "932:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ERC1155_$2716",
+                              "typeIdentifier": "t_contract$_ERC1155_$2726",
                               "typeString": "contract ERC1155"
                             }
                           },
@@ -9922,7 +9922,7 @@
                           "lValueRequested": false,
                           "memberName": "isApprovedForAll",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1815,
+                          "referencedDeclaration": 1825,
                           "src": "932:22:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -10018,7 +10018,7 @@
                         "referencedDeclaration": 511,
                         "src": "1029:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -10029,10 +10029,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3245,
+                      "referencedDeclaration": 3255,
                       "src": "1029:19:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$3219_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$3229_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -10101,7 +10101,7 @@
                         "referencedDeclaration": 511,
                         "src": "1078:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -10112,10 +10112,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3231,
+                      "referencedDeclaration": 3241,
                       "src": "1078:17:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3219_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3229_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -10500,7 +10500,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC1155_$2716",
+                        "typeIdentifier": "t_contract$_ERC1155_$2726",
                         "typeString": "contract ERC1155"
                       },
                       "typeName": {
@@ -10510,13 +10510,13 @@
                           "id": 608,
                           "name": "ERC1155",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 2716,
+                          "referencedDeclaration": 2726,
                           "src": "1379:7:3"
                         },
-                        "referencedDeclaration": 2716,
+                        "referencedDeclaration": 2726,
                         "src": "1379:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -10590,10 +10590,10 @@
                       "name": "ERC1155",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2716,
+                      "referencedDeclaration": 2726,
                       "src": "1395:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2716_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC1155_$2726_$",
                         "typeString": "type(contract ERC1155)"
                       }
                     },
@@ -10608,7 +10608,7 @@
                     "src": "1395:44:3",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC1155_$2716",
+                      "typeIdentifier": "t_contract$_ERC1155_$2726",
                       "typeString": "contract ERC1155"
                     }
                   },
@@ -11435,7 +11435,7 @@
                         "referencedDeclaration": 610,
                         "src": "1761:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC1155_$2716",
+                          "typeIdentifier": "t_contract$_ERC1155_$2726",
                           "typeString": "contract ERC1155"
                         }
                       },
@@ -11446,7 +11446,7 @@
                       "lValueRequested": false,
                       "memberName": "safeTransferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1853,
+                      "referencedDeclaration": 1863,
                       "src": "1761:22:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
@@ -11714,7 +11714,7 @@
                         "referencedDeclaration": 511,
                         "src": "2093:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$3219_storage",
+                          "typeIdentifier": "t_struct$_Counter_$3229_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -11725,10 +11725,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3231,
+                      "referencedDeclaration": 3241,
                       "src": "2093:17:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3219_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3219_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$3229_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$3229_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -11822,7 +11822,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-01-18T19:59:38.835Z",
+  "updatedAt": "2022-01-18T20:03:17.199Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

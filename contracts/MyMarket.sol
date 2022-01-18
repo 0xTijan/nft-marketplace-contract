@@ -5,58 +5,37 @@ import "../node_modules/@openzeppelin/contracts/utils/Counters.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "../node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract MyMarketPlace {
+/**Working nft simple contract for trading */
 
+contract NFTTrader {
+    
     using Counters for Counters.Counter;
-    Counters.Counter private _offerIds;
+    Counters.Counter private _listingIds;
     Counters.Counter private _itemsSold;
 
-    struct Offer{
-        address contractAddress;
+    mapping(address => mapping(uint256 => Listing)) public listings;
+
+    mapping(uint256 => Listing) idToListing;
+
+    struct Listing {
         address seller;
-        uint tokenId;
-        uint amount;
-        uint price;
-        bool completed;
+        uint256 price;
     }
 
-    mapping(uint256 => Offer) allOffers;
-
-    function createOffer(address contractAddress, uint256 tokenId, uint256 amount, uint256 price) public {
+    function addListing(address contractAddress, uint256 price, uint256 tokenId) public {
         ERC1155 token = ERC1155(contractAddress);
         require(token.balanceOf(msg.sender, tokenId) > 0, "caller must own given token");
-        require(token.isApprovedForAll(msg.sender, address(this)), "Contract must be approved!");    
+        require(token.isApprovedForAll(msg.sender, address(this)), "Contract must be approved!");
 
-        _offerIds.increment();
-        uint256 itemId = _offerIds.current();
-
-        allOffers[itemId] = Offer(
-            contractAddress,
-            msg.sender,
-            tokenId,
-            amount,
-            price,
-            false
-        );
+        listings[contractAddress][tokenId] = Listing(msg.sender, price);
     }
 
-    function purchase(uint256 _offerId, uint256 _amount) public payable {
-        ERC1155 token = ERC1155(allOffers[_offerId].contractAddress);
-        require(msg.value >= allOffers[_offerId].price * _amount, "Insufficient funds sent!");
-        require(allOffers[_offerId].completed == false, "Offer not available anymore!");
-        require(allOffers[_offerId].seller != msg.sender, "Your Item!");
-
-        allOffers[_offerId].completed = true;
-
-        token.safeTransferFrom(allOffers[_offerId].seller, msg.sender, allOffers[_offerId].tokenId, allOffers[_offerId].amount, "");
-    }
-
-    function getOfferById(uint256 _id) public view returns(Offer memory) {
-        return allOffers[_id];
-    }
-
-    function getCurrentOfferId() public view returns(uint256) {
-        return _offerIds.current();
+    function purchase(address contractAddress, uint256 tokenId, uint256 amount) public payable {
+        require(msg.value >= listings[contractAddress][tokenId].price * amount, "Insufficient funds!");
+        _itemsSold.increment();
+        ERC1155 token = ERC1155(contractAddress);
+        token.safeTransferFrom(listings[contractAddress][tokenId].seller, msg.sender, tokenId, amount, "");
+        payable(listings[contractAddress][tokenId].seller).transfer(listings[contractAddress][tokenId].price * amount);
     }
 
 }

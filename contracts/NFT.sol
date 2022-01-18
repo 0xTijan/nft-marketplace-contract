@@ -103,6 +103,10 @@ contract NFT is ERC1155, Ownable {
         _mint(account, id, amount, "");
     }
 
+    function viewCurrentOfferId() public view returns(uint256) {
+        return _offerIds.current();
+    }
+
     function burn(address account, uint256 id, uint256 amount) public {
         require(msg.sender == account, "Only NFT onwers can burn!");
         require(balanceOf(account, id) >= amount, "You don't have engough NFTs");
