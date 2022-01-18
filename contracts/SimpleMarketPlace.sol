@@ -7,7 +7,7 @@ import "../node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 /**Working nft simple contract for trading */
 
-contract NFTTrader {
+contract SimpleMarketPlace {
     
     using Counters for Counters.Counter;
     Counters.Counter private _listingIds;
