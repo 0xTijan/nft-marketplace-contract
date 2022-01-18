@@ -13,6 +13,8 @@ contract NFTTrader {
     Counters.Counter private _listingIds;
     Counters.Counter private _itemsSold;
 
+    address public sellerA;
+
     mapping(address => mapping(uint256 => Listing)) public listings;
 
     mapping(uint256 => Listing) idToListing;
@@ -26,7 +28,6 @@ contract NFTTrader {
         ERC1155 token = ERC1155(contractAddress);
         require(token.balanceOf(msg.sender, tokenId) > 0, "caller must own given token");
         require(token.isApprovedForAll(msg.sender, address(this)), "Contract must be approved!");
-
         listings[contractAddress][tokenId] = Listing(msg.sender, price);
     }
 
@@ -35,7 +36,7 @@ contract NFTTrader {
         _itemsSold.increment();
         ERC1155 token = ERC1155(contractAddress);
         token.safeTransferFrom(listings[contractAddress][tokenId].seller, msg.sender, tokenId, amount, "");
-        payable(listings[contractAddress][tokenId].seller).transfer(listings[contractAddress][tokenId].price * amount);
+        payable(listings[contractAddress][tokenId].seller).transfer(msg.value);
     }
 
 }
