@@ -7,31 +7,28 @@ import "../node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 
 /*
- * Smart contract allowing users to trade (list and buy) any ERC1155 tokens.
- * Users can create public and private listings.
+ * Smart contract allowing users to trade (list and buy) NTFs from any ERC1155 smart contract.
  */
 
-contract Marketplace is Ownable, ReentrancyGuard{
+contract SimpleMarketplace is Ownable, ReentrancyGuard{
     
     using Counters for Counters.Counter;
     Counters.Counter private _listingIds;
     Counters.Counter private _tokensSold;
     uint256 private _volume;
 
-    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
-    event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
+    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken);
+    event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken);
 
     mapping(uint256 => Listing) private idToListing;
 
     struct Listing {
         address contractAddress;
         address seller;
-        address buyer;
         uint256 tokenId;
         uint256 amount;
         uint256 price;
         uint256 tokensAvailable;
-        bool privateListing;
         bool completed;
     }
 
@@ -40,7 +37,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         uint256 itemsSold;
     }
 
-    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, bool privateListing, address privateBuyer) public nonReentrant {
+    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price) public nonReentrant {
         ERC1155 token = ERC1155(contractAddress);
 
         require(token.balanceOf(msg.sender, tokenId) > amount, "Caller must own given token!");
@@ -48,17 +45,13 @@ contract Marketplace is Ownable, ReentrancyGuard{
 
         _listingIds.increment();
         uint256 listingId = _listingIds.current();
-        idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
+        idToListing[listingId] = Listing(contractAddress, msg.sender, tokenId, amount, price, amount, false);
 
-        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateListing);
+        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price);
     }
 
     function purchaseToken(uint256 listingId, uint256 amount) public payable nonReentrant {
         ERC1155 token = ERC1155(idToListing[listingId].contractAddress);
-
-        if(idToListing[listingId].privateListing == true) {
-            require(idToListing[listingId].buyer == msg.sender, "Sale is private!");
-        }
 
         require(msg.sender != idToListing[listingId].seller, "Can't buy your onw tokens!");
         require(msg.value >= idToListing[listingId].price * amount, "Insufficient funds!");
@@ -70,7 +63,6 @@ contract Marketplace is Ownable, ReentrancyGuard{
         _volume += idToListing[listingId].price * amount;
 
         idToListing[listingId].tokensAvailable -= amount;
-        idToListing[listingId].buyer = msg.sender;
         if(idToListing[listingId].tokensAvailable == 0) {
             idToListing[listingId].completed = true;
         }
@@ -78,11 +70,10 @@ contract Marketplace is Ownable, ReentrancyGuard{
         emit TokenSold(
             idToListing[listingId].contractAddress,
             idToListing[listingId].seller,
-            idToListing[listingId].buyer,
+            msg.sender,
             idToListing[listingId].tokenId,
             amount,
-            idToListing[listingId].price,
-            idToListing[listingId].privateListing
+            idToListing[listingId].price
         );
 
         token.safeTransferFrom(idToListing[listingId].seller, msg.sender, idToListing[listingId].tokenId, amount, "");
