@@ -9,13 +9,15 @@ import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 /*
  * Smart contract allowing users to trade (list and buy) any ERC1155 tokens.
  * Users can create public and private listings.
+ * Users can set more addresses that can buy tokens (like whitelist).
  */
 
+
 contract Marketplace is Ownable, ReentrancyGuard{
-    
+
     using Counters for Counters.Counter;
     Counters.Counter private _listingIds;
-    Counters.Counter private _tokensSold;
+    Counters.Counter private _numOfTxs;
     uint256 private _volume;
 
     event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
@@ -26,7 +28,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
     struct Listing {
         address contractAddress;
         address seller;
-        address buyer;
+        address[] buyer;
         uint256 tokenId;
         uint256 amount;
         uint256 price;
@@ -40,12 +42,14 @@ contract Marketplace is Ownable, ReentrancyGuard{
         uint256 itemsSold;
     }
 
-    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, bool privateListing, address privateBuyer) public nonReentrant {
+
+    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, address[] memory privateBuyer) public nonReentrant {
         ERC1155 token = ERC1155(contractAddress);
 
         require(token.balanceOf(msg.sender, tokenId) > amount, "Caller must own given token!");
         require(token.isApprovedForAll(msg.sender, address(this)), "Contract must be approved!");
 
+        bool privateListing = privateBuyer.length>0;
         _listingIds.increment();
         uint256 listingId = _listingIds.current();
         idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
@@ -57,7 +61,13 @@ contract Marketplace is Ownable, ReentrancyGuard{
         ERC1155 token = ERC1155(idToListing[listingId].contractAddress);
 
         if(idToListing[listingId].privateListing == true) {
-            require(idToListing[listingId].buyer == msg.sender, "Sale is private!");
+            bool whitelisted = false;
+            for(uint i=0; i<idToListing[listingId].buyer.length; i++){
+                if(idToListing[listingId].buyer[i] == msg.sender) {
+                    whitelisted = true;
+                }
+            }
+            require(whitelisted == true, "Sale is private!");
         }
 
         require(msg.sender != idToListing[listingId].seller, "Can't buy your onw tokens!");
@@ -66,11 +76,13 @@ contract Marketplace is Ownable, ReentrancyGuard{
         require(idToListing[listingId].completed == false, "Listing not available anymore!");
         require(idToListing[listingId].tokensAvailable >= amount, "Not enough tokens left!");
         
-        _tokensSold.increment();
+        _numOfTxs.increment();
         _volume += idToListing[listingId].price * amount;
 
         idToListing[listingId].tokensAvailable -= amount;
-        idToListing[listingId].buyer = msg.sender;
+        if(idToListing[listingId].privateListing == false){
+            idToListing[listingId].buyer.push(msg.sender);
+        }
         if(idToListing[listingId].tokensAvailable == 0) {
             idToListing[listingId].completed = true;
         }
@@ -78,7 +90,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         emit TokenSold(
             idToListing[listingId].contractAddress,
             idToListing[listingId].seller,
-            idToListing[listingId].buyer,
+            msg.sender,
             idToListing[listingId].tokenId,
             amount,
             idToListing[listingId].price,
@@ -91,11 +103,10 @@ contract Marketplace is Ownable, ReentrancyGuard{
 
     function  viewAllListings() public view returns (Listing[] memory) {
         uint itemCount = _listingIds.current();
-        uint unsoldItemCount = _listingIds.current() - _tokensSold.current();
+        uint unsoldItemCount = _listingIds.current() - _numOfTxs.current();
         uint currentIndex = 0;
 
         Listing[] memory items = new Listing[](unsoldItemCount);
-
         for (uint i = 0; i < itemCount; i++) {
                 uint currentId = i + 1;
                 Listing storage currentItem = idToListing[currentId];
@@ -111,7 +122,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
     }
 
     function viewStats() public view returns(Stats memory) {
-        return Stats(_volume, _tokensSold.current());
+        return Stats(_volume, _numOfTxs.current());
     }
 
     function withdrawFees() public onlyOwner nonReentrant {
