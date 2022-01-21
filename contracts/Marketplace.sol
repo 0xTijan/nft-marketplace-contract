@@ -43,7 +43,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
     }
 
 
-    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, address[] memory privateBuyer) public nonReentrant {
+    function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, address[] memory privateBuyer) public nonReentrant returns(uint256) {
         ERC1155 token = ERC1155(contractAddress);
 
         require(token.balanceOf(msg.sender, tokenId) > amount, "Caller must own given token!");
@@ -55,6 +55,8 @@ contract Marketplace is Ownable, ReentrancyGuard{
         idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
 
         emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateListing);
+
+        return _listingIds.current();
     }
 
     function purchaseToken(uint256 listingId, uint256 amount) public payable nonReentrant {
