@@ -20,7 +20,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
     Counters.Counter private _numOfTxs;
     uint256 private _volume;
 
-    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
+    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, address[] privateBuyer, bool privateSale);
     event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
 
     mapping(uint256 => Listing) private idToListing;
@@ -46,7 +46,8 @@ contract Marketplace is Ownable, ReentrancyGuard{
     function listToken(address contractAddress, uint256 tokenId, uint256 amount, uint256 price, address[] memory privateBuyer) public nonReentrant returns(uint256) {
         ERC1155 token = ERC1155(contractAddress);
 
-        require(token.balanceOf(msg.sender, tokenId) > amount, "Caller must own given token!");
+        require(amount > 0, "Amount must be greater than 0!");
+        require(token.balanceOf(msg.sender, tokenId) >= amount, "Caller must own given token!");
         require(token.isApprovedForAll(msg.sender, address(this)), "Contract must be approved!");
 
         bool privateListing = privateBuyer.length>0;
@@ -54,7 +55,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         uint256 listingId = _listingIds.current();
         idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
 
-        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateListing);
+        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateBuyer, privateListing);
 
         return _listingIds.current();
     }
