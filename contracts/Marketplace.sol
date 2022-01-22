@@ -20,10 +20,11 @@ contract Marketplace is Ownable, ReentrancyGuard{
     Counters.Counter private _numOfTxs;
     uint256 private _volume;
 
-    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, address[] privateBuyer, bool privateSale);
+    event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, address[] privateBuyer, bool privateSale, uint listingId);
     event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
 
     mapping(uint256 => Listing) private idToListing;
+    Listing[] private listingsArray;
 
     struct Listing {
         address contractAddress;
@@ -54,8 +55,9 @@ contract Marketplace is Ownable, ReentrancyGuard{
         _listingIds.increment();
         uint256 listingId = _listingIds.current();
         idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
+        listingsArray.push(idToListing[listingId]);
 
-        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateBuyer, privateListing);
+        emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateBuyer, privateListing, _listingIds.current());
 
         return _listingIds.current();
     }
@@ -105,19 +107,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
     }
 
     function  viewAllListings() public view returns (Listing[] memory) {
-        uint itemCount = _listingIds.current();
-        uint unsoldItemCount = _listingIds.current() - _numOfTxs.current();
-        uint currentIndex = 0;
-
-        Listing[] memory items = new Listing[](unsoldItemCount);
-        for (uint i = 0; i < itemCount; i++) {
-                uint currentId = i + 1;
-                Listing storage currentItem = idToListing[currentId];
-                items[currentIndex] = currentItem;
-                currentIndex += 1;
-        }
-
-        return items;
+        return listingsArray;
     }
 
     function viewListingById(uint256 _id) public view returns(Listing memory) {

@@ -24,6 +24,7 @@ contract NFT is ERC1155, Ownable {
 
     function burn(address account, uint256 id, uint256 amount) public {
         require(msg.sender == account, "Only NFT onwers can burn!");
+        require(balanceOf(msg.sender, id) >= amount, "Not enough tokens!");
         _burn(account, id, amount);
     }
 
