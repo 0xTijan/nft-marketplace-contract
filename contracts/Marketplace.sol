@@ -36,6 +36,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         uint256 tokensAvailable;
         bool privateListing;
         bool completed;
+        uint listingId;
     }
 
     struct Stats {
@@ -54,7 +55,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         bool privateListing = privateBuyer.length>0;
         _listingIds.increment();
         uint256 listingId = _listingIds.current();
-        idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false);
+        idToListing[listingId] = Listing(contractAddress, msg.sender, privateBuyer, tokenId, amount, price, amount, privateListing, false, _listingIds.current());
         listingsArray.push(idToListing[listingId]);
 
         emit TokenListed(contractAddress, msg.sender, tokenId, amount, price, privateBuyer, privateListing, _listingIds.current());
