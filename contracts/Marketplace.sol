@@ -22,6 +22,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
 
     event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, address[] privateBuyer, bool privateSale, uint listingId);
     event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
+    event ListingDeleted(uint listingId);
 
     mapping(uint256 => Listing) private idToListing;
     Listing[] private listingsArray;
@@ -86,11 +87,14 @@ contract Marketplace is Ownable, ReentrancyGuard{
         _volume += idToListing[listingId].price * amount;
 
         idToListing[listingId].tokensAvailable -= amount;
+        listingsArray[listingId-1].tokensAvailable -= amount;
         if(idToListing[listingId].privateListing == false){
             idToListing[listingId].buyer.push(msg.sender);
+            listingsArray[listingId-1].buyer.push(msg.sender);
         }
         if(idToListing[listingId].tokensAvailable == 0) {
             idToListing[listingId].completed = true;
+            listingsArray[listingId-1].completed = true;
         }
 
         emit TokenSold(
@@ -105,6 +109,16 @@ contract Marketplace is Ownable, ReentrancyGuard{
 
         token.safeTransferFrom(idToListing[listingId].seller, msg.sender, idToListing[listingId].tokenId, amount, "");
         payable(idToListing[listingId].seller).transfer((idToListing[listingId].price * amount/50)*49); //Transfering 98% to seller, fee 2%  ((msg.value/50)*49)
+    }
+
+    function deleteListing(uint _listingId) public {
+        require(msg.sender == idToListing[_listingId].seller, "Not caller's listing!");
+        require(idToListing[_listingId].completed == false, "Listing not available!");
+        
+        idToListing[_listingId].completed = true;
+        listingsArray[_listingId-1].completed = true;
+
+        emit ListingDeleted(_listingId);
     }
 
     function  viewAllListings() public view returns (Listing[] memory) {
