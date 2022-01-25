@@ -169,7 +169,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -193,7 +194,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -263,7 +265,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -405,7 +408,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -424,7 +428,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"internalType\":\"struct NFT.Input[]\",\"name\":\"inputArray\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"burnBatch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"onERC1155Received\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"uri\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"balanceOf(address,uint256)\":{\"details\":\"See {IERC1155-balanceOf}. Requirements: - `account` cannot be the zero address.\"},\"balanceOfBatch(address[],uint256[])\":{\"details\":\"See {IERC1155-balanceOfBatch}. Requirements: - `accounts` and `ids` must have the same length.\"},\"isApprovedForAll(address,address)\":{\"details\":\"See {IERC1155-isApprovedForAll}.\"},\"safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)\":{\"details\":\"See {IERC1155-safeBatchTransferFrom}.\"},\"safeTransferFrom(address,address,uint256,uint256,bytes)\":{\"details\":\"See {IERC1155-safeTransferFrom}.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"See {IERC1155-setApprovalForAll}.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"},\"uri(uint256)\":{\"details\":\"See {IERC1155MetadataURI-uri}. This implementation returns the same URI for *all* token types. It relies on the token type ID substitution mechanism https://eips.ethereum.org/EIPS/eip-1155#metadata[defined in the EIP]. Clients calling this function must replace the `\\\\{id\\\\}` substring with the actual token type ID.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NFT.sol\":\"NFT\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NFT.sol\":{\"keccak256\":\"0x41b2fb7e314decc62c89ccb36923c3b2a5e617b7e2d4a983cc0f138c4d05f611\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea90b63c7b622afb0ba23ca42c1afb5d39cb94ec9f3a5fd479f9491f1f09d13b\",\"dweb:/ipfs/QmSAppcZ7yDZbLdcJgLM2g3vPnUmvUG4JpJHV7tkNGCUqE\"]},\"project:/node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol\":{\"keccak256\":\"0x6571038653cd8c82fd15c3d9043063e9d1c44991e00799c957ececea7ce9407b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7b489c3ae3191089788a3986b4f7b5492bb785a37be9b37bdac6a2248472653\",\"dweb:/ipfs/QmdCCoXxqbsLWxGtRUuY2rgFLsNNz1kttuCSagv3hJHM4B\"]},\"project:/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol\":{\"keccak256\":\"0x8e93de94c9062ebc94fb7e2e3929b0781ac6a2b7772e2f7a59045861c93e5be9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f920a631bf986c610fe573d3c70a2bb6f224f86f4a8550016470c7ee476c9ab5\",\"dweb:/ipfs/QmYzsyVMfnaREKHcHv5RPS8Xg5r1Q38E2SDsGBTnXeFWzb\"]},\"project:/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\":{\"keccak256\":\"0xc743d2235b8854045c308d2f8f1ed88efed6c2bebf2b7a4a51ea42480c82e566\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://05e54e397a053f319187999ef4d65446a7f15f693ddd66dfaed4d856f67dac4e\",\"dweb:/ipfs/QmbGTFVdZxShg76UPcuLAXm6HBjZx3Vn6CL1eaBhV9rST1\"]},\"project:/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol\":{\"keccak256\":\"0x65283046c52a6bd3e57e456cc5eeab0dd86c00979b84495dc0109b609747fd16\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cae1aa0113f29cb099e7ff5c2b8f559ede5fc9a8f1d57746e5ecea8fff9157de\",\"dweb:/ipfs/QmQrymH5ACUZcoWYSYZTQTGM1xVEZpnuQce8etBWTB33xm\"]},\"project:/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol\":{\"keccak256\":\"0xa66d18b9a85458d28fc3304717964502ae36f7f8a2ff35bc83f6f85d74b03574\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e46c80ea068989111d6103e5521223f9ef337e93de76deed8b03f75c6f7b2797\",\"dweb:/ipfs/QmNoSE6knNfFncdDDLTb3fGR6oSQty1srG96Vsx3E9wQdw\"]},\"project:/node_modules/@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x51b758a8815ecc9596c66c37d56b1d33883a444631a3f916b9fe65cb863ef7c4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://997ca03557985b3c6f9143a18b6c3a710b3bc1c7f189ee956d305a966ecfb922\",\"dweb:/ipfs/QmQaD3Wb62F88SHqmpLttvF6wKuPDQep2LLUcKPekeRzvz\"]},\"project:/node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"project:/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"project:/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]}},\"version\":1}",
@@ -1163,7 +1168,7 @@
                 }
               ]
             },
-            "name": "array_allocation_size_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+            "name": "array_allocation_size_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2222,7 +2227,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_struct$_Input_$595_memory_ptr_fromMemory",
+            "name": "abi_decode_t_struct$_Input_$646_memory_ptr_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2267,7 +2272,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "array_allocation_size_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                          "name": "array_allocation_size_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                           "nodeType": "YulIdentifier",
                           "src": "3752:78:16"
                         },
@@ -2507,7 +2512,7 @@
                                 }
                               ],
                               "functionName": {
-                                "name": "abi_decode_t_struct$_Input_$595_memory_ptr_fromMemory",
+                                "name": "abi_decode_t_struct$_Input_$646_memory_ptr_fromMemory",
                                 "nodeType": "YulIdentifier",
                                 "src": "4259:53:16"
                               },
@@ -2651,7 +2656,7 @@
                 }
               ]
             },
-            "name": "abi_decode_available_length_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory",
+            "name": "abi_decode_available_length_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2830,7 +2835,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_decode_available_length_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory",
+                      "name": "abi_decode_available_length_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory",
                       "nodeType": "YulIdentifier",
                       "src": "4708:95:16"
                     },
@@ -2847,7 +2852,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory",
+            "name": "abi_decode_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -3071,7 +3076,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory",
+                          "name": "abi_decode_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory",
                           "nodeType": "YulIdentifier",
                           "src": "5317:78:16"
                         },
@@ -3090,7 +3095,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory",
+            "name": "abi_decode_tuple_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -7949,7 +7954,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    function revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() {\n        revert(0, 0)\n    }\n\n    function revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_address_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_address(value)\n    }\n\n    // struct NFT.Input\n    function abi_decode_t_struct$_Input_$595_memory_ptr_fromMemory(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x60) { revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() }\n        value := allocate_memory(0x60)\n\n        {\n            // id\n\n            let offset := 0\n\n            mstore(add(value, 0x00), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // amount\n\n            let offset := 32\n\n            mstore(add(value, 0x20), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // to\n\n            let offset := 64\n\n            mstore(add(value, 0x40), abi_decode_t_address_fromMemory(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct NFT.Input[]\n    function abi_decode_available_length_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let srcEnd := add(offset, mul(length, 0x60))\n        if gt(srcEnd, end) {\n            revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef()\n        }\n        for { let src := offset } lt(src, srcEnd) { src := add(src, 0x60) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_struct$_Input_$595_memory_ptr_fromMemory(elementPos, end))\n            dst := add(dst, 0x20)\n        }\n    }\n\n    // struct NFT.Input[]\n    function abi_decode_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := mload(offset)\n        array := abi_decode_available_length_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := mload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0 := abi_decode_t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: mint to the zero addres\")\n\n        mstore(add(memPtr, 32), \"s\")\n\n    }\n\n    function abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 33)\n        store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        // overflow, if x > (maxValue - y)\n        if gt(x, sub(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, y)) { panic_error_0x11() }\n\n        sum := add(x, y)\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_length_t_bytes_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_bytes_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function cleanup_t_bytes4(value) -> cleaned {\n        cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n    }\n\n    function validator_revert_t_bytes4(value) {\n        if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bytes4_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function shift_right_224_unsigned(value) -> newValue {\n        newValue :=\n\n        shr(224, value)\n\n    }\n\n    function return_data_selector() -> sig {\n        if gt(returndatasize(), 3) {\n            returndatacopy(0, 0, 4)\n            sig := shift_right_224_unsigned(mload(0))\n        }\n    }\n\n    function try_decode_error_message() -> ret {\n        if lt(returndatasize(), 0x44) { leave }\n\n        let data := allocate_unbounded()\n        returndatacopy(data, 4, sub(returndatasize(), 4))\n\n        let offset := mload(data)\n        if or(\n            gt(offset, 0xffffffffffffffff),\n            gt(add(offset, 0x24), returndatasize())\n            ) {\n            leave\n        }\n\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, 0xffffffffffffffff) { leave }\n\n        let end := add(add(msg, 0x20), length)\n        if gt(end, add(data, sub(returndatasize(), 4))) { leave }\n\n        finalize_allocation(data, add(offset, add(0x20, length)))\n        ret := msg\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to non ERC1155\")\n\n        mstore(add(memPtr, 32), \"Receiver implementer\")\n\n    }\n\n    function abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 52)\n        store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ERC1155Receiver rejecte\")\n\n        mstore(add(memPtr, 32), \"d tokens\")\n\n    }\n\n    function abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n}\n",
+      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    function revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() {\n        revert(0, 0)\n    }\n\n    function revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_address_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_address(value)\n    }\n\n    // struct NFT.Input\n    function abi_decode_t_struct$_Input_$646_memory_ptr_fromMemory(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x60) { revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() }\n        value := allocate_memory(0x60)\n\n        {\n            // id\n\n            let offset := 0\n\n            mstore(add(value, 0x00), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // amount\n\n            let offset := 32\n\n            mstore(add(value, 0x20), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // to\n\n            let offset := 64\n\n            mstore(add(value, 0x40), abi_decode_t_address_fromMemory(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct NFT.Input[]\n    function abi_decode_available_length_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let srcEnd := add(offset, mul(length, 0x60))\n        if gt(srcEnd, end) {\n            revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef()\n        }\n        for { let src := offset } lt(src, srcEnd) { src := add(src, 0x60) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_struct$_Input_$646_memory_ptr_fromMemory(elementPos, end))\n            dst := add(dst, 0x20)\n        }\n    }\n\n    // struct NFT.Input[]\n    function abi_decode_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := mload(offset)\n        array := abi_decode_available_length_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := mload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0 := abi_decode_t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: mint to the zero addres\")\n\n        mstore(add(memPtr, 32), \"s\")\n\n    }\n\n    function abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 33)\n        store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        // overflow, if x > (maxValue - y)\n        if gt(x, sub(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, y)) { panic_error_0x11() }\n\n        sum := add(x, y)\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_length_t_bytes_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_bytes_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function cleanup_t_bytes4(value) -> cleaned {\n        cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n    }\n\n    function validator_revert_t_bytes4(value) {\n        if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bytes4_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function shift_right_224_unsigned(value) -> newValue {\n        newValue :=\n\n        shr(224, value)\n\n    }\n\n    function return_data_selector() -> sig {\n        if gt(returndatasize(), 3) {\n            returndatacopy(0, 0, 4)\n            sig := shift_right_224_unsigned(mload(0))\n        }\n    }\n\n    function try_decode_error_message() -> ret {\n        if lt(returndatasize(), 0x44) { leave }\n\n        let data := allocate_unbounded()\n        returndatacopy(data, 4, sub(returndatasize(), 4))\n\n        let offset := mload(data)\n        if or(\n            gt(offset, 0xffffffffffffffff),\n            gt(add(offset, 0x24), returndatasize())\n            ) {\n            leave\n        }\n\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, 0xffffffffffffffff) { leave }\n\n        let end := add(add(msg, 0x20), length)\n        if gt(end, add(data, sub(returndatasize(), 4))) { leave }\n\n        finalize_allocation(data, add(offset, add(0x20, length)))\n        ret := msg\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to non ERC1155\")\n\n        mstore(add(memPtr, 32), \"Receiver implementer\")\n\n    }\n\n    function abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 52)\n        store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ERC1155Receiver rejecte\")\n\n        mstore(add(memPtr, 32), \"d tokens\")\n\n    }\n\n    function abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n}\n",
       "id": 16,
       "language": "Yul",
       "name": "#utility.yul"
@@ -25521,42 +25526,42 @@
     "absolutePath": "project:/contracts/NFT.sol",
     "exportedSymbols": {
       "Address": [
-        2904
+        2955
       ],
       "Context": [
-        2926
+        2977
       ],
       "ERC1155": [
-        2360
+        2411
       ],
       "ERC1155Burnable": [
-        2592
+        2643
       ],
       "ERC165": [
-        3024
+        3075
       ],
       "IERC1155": [
-        2482
+        2533
       ],
       "IERC1155MetadataURI": [
-        2607
+        2658
       ],
       "IERC1155Receiver": [
-        2523
+        2574
       ],
       "IERC165": [
-        3036
+        3087
       ],
       "NFT": [
-        636
+        687
       ]
     },
-    "id": 637,
+    "id": 688,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 585,
+        "id": 636,
         "literals": [
           "solidity",
           "^",
@@ -25569,11 +25574,11 @@
       {
         "absolutePath": "project:/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
         "file": "../node_modules/@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
-        "id": 586,
+        "id": 637,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 637,
-        "sourceUnit": 2593,
+        "scope": 688,
+        "sourceUnit": 2644,
         "src": "60:94:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -25583,13 +25588,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 587,
+              "id": 638,
               "name": "ERC1155Burnable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2592,
+              "referencedDeclaration": 2643,
               "src": "174:15:2"
             },
-            "id": 588,
+            "id": 639,
             "nodeType": "InheritanceSpecifier",
             "src": "174:15:2"
           }
@@ -25598,16 +25603,16 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 636,
+        "id": 687,
         "linearizedBaseContracts": [
-          636,
-          2592,
-          2360,
-          2607,
-          2482,
-          3024,
-          3036,
-          2926
+          687,
+          2643,
+          2411,
+          2658,
+          2533,
+          3075,
+          3087,
+          2977
         ],
         "name": "NFT",
         "nameLocation": "167:3:2",
@@ -25615,16 +25620,16 @@
         "nodes": [
           {
             "canonicalName": "NFT.Input",
-            "id": 595,
+            "id": 646,
             "members": [
               {
                 "constant": false,
-                "id": 590,
+                "id": 641,
                 "mutability": "mutable",
                 "name": "id",
                 "nameLocation": "231:2:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "223:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -25633,7 +25638,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 589,
+                  "id": 640,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "223:7:2",
@@ -25646,12 +25651,12 @@
               },
               {
                 "constant": false,
-                "id": 592,
+                "id": 643,
                 "mutability": "mutable",
                 "name": "amount",
                 "nameLocation": "252:6:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "244:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -25660,7 +25665,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 591,
+                  "id": 642,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "244:7:2",
@@ -25673,12 +25678,12 @@
               },
               {
                 "constant": false,
-                "id": 594,
+                "id": 645,
                 "mutability": "mutable",
                 "name": "to",
                 "nameLocation": "277:2:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "269:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -25687,7 +25692,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 593,
+                  "id": 644,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "269:7:2",
@@ -25703,19 +25708,19 @@
             "name": "Input",
             "nameLocation": "206:5:2",
             "nodeType": "StructDefinition",
-            "scope": 636,
+            "scope": 687,
             "src": "199:88:2",
             "visibility": "public"
           },
           {
             "body": {
-              "id": 634,
+              "id": 685,
               "nodeType": "Block",
               "src": "346:153:2",
               "statements": [
                 {
                   "body": {
-                    "id": 632,
+                    "id": 683,
                     "nodeType": "Block",
                     "src": "398:94:2",
                     "statements": [
@@ -25725,24 +25730,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 617,
+                                  "id": 668,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "419:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 619,
+                                "id": 670,
                                 "indexExpression": {
-                                  "id": 618,
+                                  "id": 669,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "430:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -25756,18 +25761,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "419:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 620,
+                              "id": 671,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "to",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 594,
+                              "referencedDeclaration": 645,
                               "src": "419:16:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -25777,24 +25782,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 621,
+                                  "id": 672,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "437:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 623,
+                                "id": 674,
                                 "indexExpression": {
-                                  "id": 622,
+                                  "id": 673,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "448:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -25808,18 +25813,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "437:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 624,
+                              "id": 675,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "id",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 590,
+                              "referencedDeclaration": 641,
                               "src": "437:16:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -25829,24 +25834,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 625,
+                                  "id": 676,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "455:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 627,
+                                "id": 678,
                                 "indexExpression": {
-                                  "id": 626,
+                                  "id": 677,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "466:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -25860,18 +25865,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "455:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 628,
+                              "id": 679,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "amount",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 592,
+                              "referencedDeclaration": 643,
                               "src": "455:20:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -25880,7 +25885,7 @@
                             },
                             {
                               "hexValue": "",
-                              "id": 629,
+                              "id": 680,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -25914,18 +25919,18 @@
                                 "typeString": "literal_string \"\""
                               }
                             ],
-                            "id": 616,
+                            "id": 667,
                             "name": "_mint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1843,
+                            "referencedDeclaration": 1894,
                             "src": "413:5:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                               "typeString": "function (address,uint256,uint256,bytes memory)"
                             }
                           },
-                          "id": 630,
+                          "id": 681,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -25940,7 +25945,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 631,
+                        "id": 682,
                         "nodeType": "ExpressionStatement",
                         "src": "413:67:2"
                       }
@@ -25951,17 +25956,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 612,
+                    "id": 663,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 609,
+                      "id": 660,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 606,
+                      "referencedDeclaration": 657,
                       "src": "372:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -25972,18 +25977,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 610,
+                        "id": 661,
                         "name": "inputArray",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 599,
+                        "referencedDeclaration": 650,
                         "src": "374:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct NFT.Input memory[] memory"
                         }
                       },
-                      "id": 611,
+                      "id": 662,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -26002,20 +26007,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 633,
+                  "id": 684,
                   "initializationExpression": {
                     "assignments": [
-                      606
+                      657
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 606,
+                        "id": 657,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "367:1:2",
                         "nodeType": "VariableDeclaration",
-                        "scope": 633,
+                        "scope": 684,
                         "src": "362:6:2",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -26024,7 +26029,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 605,
+                          "id": 656,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "362:4:2",
@@ -26036,10 +26041,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 608,
+                    "id": 659,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 607,
+                      "id": 658,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -26058,7 +26063,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 614,
+                      "id": 665,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -26068,11 +26073,11 @@
                       "prefix": false,
                       "src": "393:3:2",
                       "subExpression": {
-                        "id": 613,
+                        "id": 664,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 606,
+                        "referencedDeclaration": 657,
                         "src": "393:1:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26084,7 +26089,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 615,
+                    "id": 666,
                     "nodeType": "ExpressionStatement",
                     "src": "393:3:2"
                   },
@@ -26093,7 +26098,7 @@
                 }
               ]
             },
-            "id": 635,
+            "id": 686,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -26101,7 +26106,7 @@
                 "arguments": [
                   {
                     "hexValue": "",
-                    "id": 602,
+                    "id": 653,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -26116,13 +26121,13 @@
                     "value": ""
                   }
                 ],
-                "id": 603,
+                "id": 654,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 601,
+                  "id": 652,
                   "name": "ERC1155",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2360,
+                  "referencedDeclaration": 2411,
                   "src": "334:7:2"
                 },
                 "nodeType": "ModifierInvocation",
@@ -26133,47 +26138,47 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 600,
+              "id": 651,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 599,
+                  "id": 650,
                   "mutability": "mutable",
                   "name": "inputArray",
                   "nameLocation": "322:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 635,
+                  "scope": 686,
                   "src": "307:25:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct NFT.Input[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 597,
+                      "id": 648,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 596,
+                        "id": 647,
                         "name": "Input",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 595,
+                        "referencedDeclaration": 646,
                         "src": "307:5:2"
                       },
-                      "referencedDeclaration": 595,
+                      "referencedDeclaration": 646,
                       "src": "307:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Input_$595_storage_ptr",
+                        "typeIdentifier": "t_struct$_Input_$646_storage_ptr",
                         "typeString": "struct NFT.Input"
                       }
                     },
-                    "id": 598,
+                    "id": 649,
                     "nodeType": "ArrayTypeName",
                     "src": "307:7:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Input_$595_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Input_$646_storage_$dyn_storage_ptr",
                       "typeString": "struct NFT.Input[]"
                     }
                   },
@@ -26183,19 +26188,19 @@
               "src": "306:27:2"
             },
             "returnParameters": {
-              "id": 604,
+              "id": 655,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "346:0:2"
             },
-            "scope": 636,
+            "scope": 687,
             "src": "295:204:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 637,
+        "scope": 688,
         "src": "158:346:2",
         "usedErrors": []
       }
@@ -26206,42 +26211,42 @@
     "absolutePath": "project:/contracts/NFT.sol",
     "exportedSymbols": {
       "Address": [
-        2904
+        2955
       ],
       "Context": [
-        2926
+        2977
       ],
       "ERC1155": [
-        2360
+        2411
       ],
       "ERC1155Burnable": [
-        2592
+        2643
       ],
       "ERC165": [
-        3024
+        3075
       ],
       "IERC1155": [
-        2482
+        2533
       ],
       "IERC1155MetadataURI": [
-        2607
+        2658
       ],
       "IERC1155Receiver": [
-        2523
+        2574
       ],
       "IERC165": [
-        3036
+        3087
       ],
       "NFT": [
-        636
+        687
       ]
     },
-    "id": 637,
+    "id": 688,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 585,
+        "id": 636,
         "literals": [
           "solidity",
           "^",
@@ -26254,11 +26259,11 @@
       {
         "absolutePath": "project:/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
         "file": "../node_modules/@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
-        "id": 586,
+        "id": 637,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 637,
-        "sourceUnit": 2593,
+        "scope": 688,
+        "sourceUnit": 2644,
         "src": "60:94:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -26268,13 +26273,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 587,
+              "id": 638,
               "name": "ERC1155Burnable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2592,
+              "referencedDeclaration": 2643,
               "src": "174:15:2"
             },
-            "id": 588,
+            "id": 639,
             "nodeType": "InheritanceSpecifier",
             "src": "174:15:2"
           }
@@ -26283,16 +26288,16 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 636,
+        "id": 687,
         "linearizedBaseContracts": [
-          636,
-          2592,
-          2360,
-          2607,
-          2482,
-          3024,
-          3036,
-          2926
+          687,
+          2643,
+          2411,
+          2658,
+          2533,
+          3075,
+          3087,
+          2977
         ],
         "name": "NFT",
         "nameLocation": "167:3:2",
@@ -26300,16 +26305,16 @@
         "nodes": [
           {
             "canonicalName": "NFT.Input",
-            "id": 595,
+            "id": 646,
             "members": [
               {
                 "constant": false,
-                "id": 590,
+                "id": 641,
                 "mutability": "mutable",
                 "name": "id",
                 "nameLocation": "231:2:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "223:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -26318,7 +26323,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 589,
+                  "id": 640,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "223:7:2",
@@ -26331,12 +26336,12 @@
               },
               {
                 "constant": false,
-                "id": 592,
+                "id": 643,
                 "mutability": "mutable",
                 "name": "amount",
                 "nameLocation": "252:6:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "244:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -26345,7 +26350,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 591,
+                  "id": 642,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "244:7:2",
@@ -26358,12 +26363,12 @@
               },
               {
                 "constant": false,
-                "id": 594,
+                "id": 645,
                 "mutability": "mutable",
                 "name": "to",
                 "nameLocation": "277:2:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 595,
+                "scope": 646,
                 "src": "269:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -26372,7 +26377,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 593,
+                  "id": 644,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "269:7:2",
@@ -26388,19 +26393,19 @@
             "name": "Input",
             "nameLocation": "206:5:2",
             "nodeType": "StructDefinition",
-            "scope": 636,
+            "scope": 687,
             "src": "199:88:2",
             "visibility": "public"
           },
           {
             "body": {
-              "id": 634,
+              "id": 685,
               "nodeType": "Block",
               "src": "346:153:2",
               "statements": [
                 {
                   "body": {
-                    "id": 632,
+                    "id": 683,
                     "nodeType": "Block",
                     "src": "398:94:2",
                     "statements": [
@@ -26410,24 +26415,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 617,
+                                  "id": 668,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "419:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 619,
+                                "id": 670,
                                 "indexExpression": {
-                                  "id": 618,
+                                  "id": 669,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "430:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -26441,18 +26446,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "419:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 620,
+                              "id": 671,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "to",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 594,
+                              "referencedDeclaration": 645,
                               "src": "419:16:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -26462,24 +26467,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 621,
+                                  "id": 672,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "437:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 623,
+                                "id": 674,
                                 "indexExpression": {
-                                  "id": 622,
+                                  "id": 673,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "448:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -26493,18 +26498,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "437:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 624,
+                              "id": 675,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "id",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 590,
+                              "referencedDeclaration": 641,
                               "src": "437:16:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -26514,24 +26519,24 @@
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 625,
+                                  "id": 676,
                                   "name": "inputArray",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 599,
+                                  "referencedDeclaration": 650,
                                   "src": "455:10:2",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct NFT.Input memory[] memory"
                                   }
                                 },
-                                "id": 627,
+                                "id": 678,
                                 "indexExpression": {
-                                  "id": 626,
+                                  "id": 677,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 606,
+                                  "referencedDeclaration": 657,
                                   "src": "466:1:2",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -26545,18 +26550,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "455:13:2",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Input_$595_memory_ptr",
+                                  "typeIdentifier": "t_struct$_Input_$646_memory_ptr",
                                   "typeString": "struct NFT.Input memory"
                                 }
                               },
-                              "id": 628,
+                              "id": 679,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "amount",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 592,
+                              "referencedDeclaration": 643,
                               "src": "455:20:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -26565,7 +26570,7 @@
                             },
                             {
                               "hexValue": "",
-                              "id": 629,
+                              "id": 680,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -26599,18 +26604,18 @@
                                 "typeString": "literal_string \"\""
                               }
                             ],
-                            "id": 616,
+                            "id": 667,
                             "name": "_mint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1843,
+                            "referencedDeclaration": 1894,
                             "src": "413:5:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                               "typeString": "function (address,uint256,uint256,bytes memory)"
                             }
                           },
-                          "id": 630,
+                          "id": 681,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -26625,7 +26630,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 631,
+                        "id": 682,
                         "nodeType": "ExpressionStatement",
                         "src": "413:67:2"
                       }
@@ -26636,17 +26641,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 612,
+                    "id": 663,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 609,
+                      "id": 660,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 606,
+                      "referencedDeclaration": 657,
                       "src": "372:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -26657,18 +26662,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 610,
+                        "id": 661,
                         "name": "inputArray",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 599,
+                        "referencedDeclaration": 650,
                         "src": "374:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct NFT.Input memory[] memory"
                         }
                       },
-                      "id": 611,
+                      "id": 662,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -26687,20 +26692,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 633,
+                  "id": 684,
                   "initializationExpression": {
                     "assignments": [
-                      606
+                      657
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 606,
+                        "id": 657,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "367:1:2",
                         "nodeType": "VariableDeclaration",
-                        "scope": 633,
+                        "scope": 684,
                         "src": "362:6:2",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -26709,7 +26714,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 605,
+                          "id": 656,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "362:4:2",
@@ -26721,10 +26726,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 608,
+                    "id": 659,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 607,
+                      "id": 658,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -26743,7 +26748,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 614,
+                      "id": 665,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -26753,11 +26758,11 @@
                       "prefix": false,
                       "src": "393:3:2",
                       "subExpression": {
-                        "id": 613,
+                        "id": 664,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 606,
+                        "referencedDeclaration": 657,
                         "src": "393:1:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26769,7 +26774,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 615,
+                    "id": 666,
                     "nodeType": "ExpressionStatement",
                     "src": "393:3:2"
                   },
@@ -26778,7 +26783,7 @@
                 }
               ]
             },
-            "id": 635,
+            "id": 686,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -26786,7 +26791,7 @@
                 "arguments": [
                   {
                     "hexValue": "",
-                    "id": 602,
+                    "id": 653,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -26801,13 +26806,13 @@
                     "value": ""
                   }
                 ],
-                "id": 603,
+                "id": 654,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 601,
+                  "id": 652,
                   "name": "ERC1155",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2360,
+                  "referencedDeclaration": 2411,
                   "src": "334:7:2"
                 },
                 "nodeType": "ModifierInvocation",
@@ -26818,47 +26823,47 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 600,
+              "id": 651,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 599,
+                  "id": 650,
                   "mutability": "mutable",
                   "name": "inputArray",
                   "nameLocation": "322:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 635,
+                  "scope": 686,
                   "src": "307:25:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Input_$595_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Input_$646_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct NFT.Input[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 597,
+                      "id": 648,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 596,
+                        "id": 647,
                         "name": "Input",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 595,
+                        "referencedDeclaration": 646,
                         "src": "307:5:2"
                       },
-                      "referencedDeclaration": 595,
+                      "referencedDeclaration": 646,
                       "src": "307:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Input_$595_storage_ptr",
+                        "typeIdentifier": "t_struct$_Input_$646_storage_ptr",
                         "typeString": "struct NFT.Input"
                       }
                     },
-                    "id": 598,
+                    "id": 649,
                     "nodeType": "ArrayTypeName",
                     "src": "307:7:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Input_$595_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Input_$646_storage_$dyn_storage_ptr",
                       "typeString": "struct NFT.Input[]"
                     }
                   },
@@ -26868,19 +26873,19 @@
               "src": "306:27:2"
             },
             "returnParameters": {
-              "id": 604,
+              "id": 655,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "346:0:2"
             },
-            "scope": 636,
+            "scope": 687,
             "src": "295:204:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 637,
+        "scope": 688,
         "src": "158:346:2",
         "usedErrors": []
       }
@@ -27034,11 +27039,12 @@
       },
       "links": {},
       "address": "0x31F6aB4fc274FE80144998535A7F74B7E37F6a88",
-      "transactionHash": "0x07eeffd14600e16e1b10f9170ee8d252eec55327d67aa33e50ea2c9021f345ee"
+      "transactionHash": "0xbca28065f15697deb27980879828cf43452b6e46c75fba17f7124c41ea7b8a89"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-01-23T16:16:40.928Z",
+  "updatedAt": "2022-01-24T14:59:34.562Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

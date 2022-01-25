@@ -22,7 +22,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
 
     event TokenListed(address contractAddress, address seller, uint256 tokenId, uint256 amount, uint256 pricePerToken, address[] privateBuyer, bool privateSale, uint listingId);
     event TokenSold(address contractAddress, address seller, address buyer, uint256 tokenId, uint256 amount, uint256 pricePerToken, bool privateSale);
-    event ListingDeleted(uint listingId);
+    event ListingDeleted(address contractAddress, uint listingId);
 
     mapping(uint256 => Listing) private idToListing;
     Listing[] private listingsArray;
@@ -118,7 +118,7 @@ contract Marketplace is Ownable, ReentrancyGuard{
         idToListing[_listingId].completed = true;
         listingsArray[_listingId-1].completed = true;
 
-        emit ListingDeleted(_listingId);
+        emit ListingDeleted(idToListing[_listingId].contractAddress, _listingId);
     }
 
     function  viewAllListings() public view returns (Listing[] memory) {
